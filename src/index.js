@@ -9,6 +9,6 @@ const root = createRoot(rootElement)
 root .render(
   <StrictMode>
     <h1>Basic Todo List Evelyn</h1>
-    {/* <App /> */}
+    <App />
   </StrictMode>
 )
