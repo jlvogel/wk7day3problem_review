@@ -16,7 +16,9 @@ export default function App() {
     /// newTodo is an object with 3 key-value pairs (text, id, and completed properties)
 
     setTodos([newTodo, ...todos])
-    /// from before setTodos is the function that updates the state todos.  
+    /// from before setTodos is the function that updates the state todos.  Best I can tell right now the state that setTodos will set todos to will be an array with 2 elemnents: newTodo, and ...todos.  todos is the state before setTodos updates it.   ... is the spread operator, which takes the elements in an array and pulls them out individually so the 2nd element could actually be more than one element.  We can see that initually todos is a blank array.   I am creating a test.js to understand this better.  Yep!  That's exactly what it does!
+
+    e.target.value = "" /// sets the target to empty string
 
 
   }
