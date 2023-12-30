@@ -38,6 +38,22 @@ export default function TodoList({
           <ul className="todolist">
             {console.log("inside the ul")}
             {todos
+              /// studying .filter and .map
+              /// need to understand callback functions
+              /// learning about callback functions
+
+              /// From w3schools:
+
+              /* "I will call back later!"
+
+              A callback is a function passed as an argument to another function
+
+              This technique allows a function to call another function
+
+              A callback function can run after another function has finished
+
+              */
+
               .filter((i) => !i.completed)
               .map((todo) => {
                 return (
