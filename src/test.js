@@ -11,3 +11,5 @@ const todosCopy = [...todos]
 
 todos[0] = ":{"
 console.log(todosCopy)
+
+false && console.log("hello")

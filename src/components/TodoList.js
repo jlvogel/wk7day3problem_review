@@ -16,6 +16,12 @@ export default function TodoList({
           e.key === "Enter" && addTodo(e)
           /// this is conditional rendering in react.
           /// same as saying if e.key === "Enter" then call function addTodo(e)  looks like a simpler way of writing an if statement
+
+          // if (e.key === "Enter") {
+          //   addTodo(e)
+          // }
+
+          // this appears to do the same thing!  
         }}
       />
       {todos.length ? (
