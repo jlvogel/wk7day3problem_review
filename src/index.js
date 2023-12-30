@@ -8,7 +8,9 @@ const root = createRoot(rootElement)
 
 root .render(
   <StrictMode>
+    {console.log("index.js Basic Todo List Evelyn")}
     <h1>Basic Todo List Evelyn</h1>
+    {console.log("index.js call App.js")}
     <App />
   </StrictMode>
 )

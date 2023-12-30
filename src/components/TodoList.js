@@ -9,11 +9,13 @@ export default function TodoList({
 }) {
   return (
     <>
+      {console.log("TodoList.js Create Todo")}
       <h1>Create Todo</h1>
       <input
         type="text"
         onKeyDown={(e) => {
-          e.key === "Enter" && addTodo(e)
+          console.log("onKeyDown event detected")
+          e.key === "Enter" && (console.log("Enter press detected"),addTodo(e))
           /// this is conditional rendering in react.
           /// same as saying if e.key === "Enter" then call function addTodo(e)  looks like a simpler way of writing an if statement
 

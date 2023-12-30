@@ -12,6 +12,8 @@ export default function App() {
   const addTodo = (e) => {
   /// addTodo is a function that takes in a parameter e
 
+    console.log("6")
+
     const newTodo = { text: e.target.value, id: Date.now(), completed: false }
     /// newTodo is an object with 3 key-value pairs (text, id, and completed properties)
 
@@ -62,6 +64,7 @@ export default function App() {
 
   return (
     <div className="App">
+    {console.log("App.js call TodoList.js")}
       <TodoList
         todos={todos}
         addTodo={addTodo}
