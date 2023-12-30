@@ -12,17 +12,17 @@ export default function App() {
   const addTodo = (e) => {
   /// addTodo is a function that takes in a parameter e
 
-    console.log("6")
-
     const newTodo = { text: e.target.value, id: Date.now(), completed: false }
     /// newTodo is an object with 3 key-value pairs (text, id, and completed properties)
+    console.log(`in addTodo function in App.js\nnewTodo == `, newTodo,`\nsetTodos([newTodo, ...todos])\n[newTodo, ...todos] == `,[newTodo, ...todos])
 
     setTodos([newTodo, ...todos])
     /// from before setTodos is the function that updates the state todos.  Best I can tell right now the state that setTodos will set todos to will be an array with 2 elemnents: newTodo, and ...todos.  todos is the state before setTodos updates it.   ... is the spread operator, which takes the elements in an array and pulls them out individually so the 2nd element could actually be more than one element.  We can see that initially todos is a blank array.   I am creating a test.js to understand this better.  Yep!  That's exactly what it does!
 
-    
+    console.log("e.target.value = \"\"")
     e.target.value = "" /// sets the target to empty string
 
+    console.log("done with App.js function addTodo(e)")
   }
 
   const completeTodo = (id, e) => {

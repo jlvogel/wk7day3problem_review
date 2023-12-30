@@ -15,7 +15,7 @@ export default function TodoList({
         type="text"
         onKeyDown={(e) => {
           console.log("onKeyDown event detected")
-          e.key === "Enter" && (console.log("Enter press detected"),addTodo(e))
+          e.key === "Enter" && (console.log("Enter press detected\nCall addTodo function which is a parameter (prop) of TodoList.js"),addTodo(e))
           /// this is conditional rendering in react.
           /// same as saying if e.key === "Enter" then call function addTodo(e)  looks like a simpler way of writing an if statement
 
@@ -31,8 +31,12 @@ export default function TodoList({
       />
       {todos.length ? (
         <>
+          {console.log("todos.length == ",todos.length,"\n!!todos.length == ",!!todos.length)}
+          {console.log("output header Todo Items")}
           <h1>Todo Items</h1>
+          {console.log("output ul")}
           <ul className="todolist">
+            {console.log("inside the ul")}
             {todos
               .filter((i) => !i.completed)
               .map((todo) => {
@@ -65,7 +69,12 @@ export default function TodoList({
           </ul>
         </>
       ) : (
-        <h1>No Todos Added Yet</h1>
+        <>
+          {console.log("todos.length == ",todos.length,"\n!!todos.length == ",!!todos.length)}
+
+          {console.log("output header: No Todos Added Yet")}
+          <h1>No Todos Added Yet</h1>
+        </>
       )}
     </>
   )
