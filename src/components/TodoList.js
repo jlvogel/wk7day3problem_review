@@ -37,6 +37,7 @@ export default function TodoList({
           {console.log("output ul")}
           <ul className="todolist">
             {console.log("inside the ul")}
+            {console.log("todos == ", todos)}
             {todos
               /// studying .filter and .map
               /// need to understand callback functions
@@ -53,9 +54,26 @@ export default function TodoList({
               A callback function can run after another function has finished
 
               */
+              
+              /// from mdn web docs:
+              /// the filter method is a method of an array
+              /// creates a SHALLOW copy of a portion of an array, filtered down to just the elements from the given array that pass the test implemented by the provided function.
 
-              .filter((i) => !i.completed)
+              // .filter((i) => !i.completed)
+              // .filter((i) => {return !i.completed}) // same as above function
+              .filter((i) => {
+                console.log("inside .filter((i) => {")
+                console.log("i == ", i)
+                return (
+                !i.completed
+              )})
+              /// for now just understand this gives an array of all elements where completed == false
+              
+              /// from mdn web docs:
+              /// creates a NEW array populated with the results of calling a provided function on every element in the calling array.
               .map((todo) => {
+                console.log("inside .map((todo) => {")
+                console.log("todo == ", todo)
                 return (
                   <Todo
                     key={todo.id}
@@ -66,6 +84,7 @@ export default function TodoList({
                   />
                 )
               })}
+            {console.log("todos == ", todos)}  
           </ul>
           <h1>Completed Items </h1>
           <ul className="todolist">

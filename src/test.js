@@ -1,15 +1,21 @@
-const todos = [1,2,3]
+// const todos = [1,2,3]
 
-// setTodos = () => {
-//   let value = 2
-//   return [{key:value}, ...todos]
-// }
+// // setTodos = () => {
+// //   let value = 2
+// //   return [{key:value}, ...todos]
+// // }
 
-// console.dir(setTodos())
+// // console.dir(setTodos())
 
-const todosCopy = [...todos]
+// const todosCopy = [...todos]
 
-todos[0] = ":{"
-console.log(todosCopy)
+// todos[0] = ":{"
+// console.log(todosCopy)
 
-false && console.log("hello")
+// false && console.log("hello")
+
+console.log([-3,-2,-1,0,1,2,3]
+
+
+  
+.filter((i)=> i>0))
