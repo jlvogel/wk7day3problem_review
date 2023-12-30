@@ -22,6 +22,9 @@ export default function TodoList({
           // }
 
           // this appears to do the same thing!  
+          // yes it does and it works in plain old js
+          // true && function calls function.
+          // took me long enough to realize this - so simple!!!
         }}
       />
       {todos.length ? (
