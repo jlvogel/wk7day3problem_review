@@ -4,7 +4,10 @@ export default function Todo({ todo, completeTodo, editTodoText, deleteTodo}){
   const [showInput, setShowInput] = useState(false)
   return (
     <li>
+      {console.log("<Todo> component returns a list item (<li>)")}
+      {console.log("<li>")}
       <div className="left">
+        {console.log("<div> className='left'")}
         <h2
           onClick={(e) => {
             setShowInput(!showInput) /// toggles the state

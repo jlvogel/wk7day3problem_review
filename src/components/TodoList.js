@@ -9,13 +9,14 @@ export default function TodoList({
 }) {
   return (
     <>
-      {console.log("TodoList.js Create Todo")}
+      {console.log("<h1>Create Todo</h1>")}
       <h1>Create Todo</h1>
+      {console.log("<input")}
       <input
         type="text"
         onKeyDown={(e) => {
           console.log("onKeyDown event detected")
-          e.key === "Enter" && (console.log("Enter press detected\nCall addTodo function which is a parameter (prop) of TodoList.js"),addTodo(e))
+          e.key === "Enter" && (console.log("Enter press detected"), console.log("call addTodo(e) function which is a parameter (prop) of TodoList.js"),addTodo(e))
           /// this is conditional rendering in react.
           /// same as saying if e.key === "Enter" then call function addTodo(e)  looks like a simpler way of writing an if statement
 
@@ -31,12 +32,12 @@ export default function TodoList({
       />
       {todos.length ? (
         <>
-          {console.log("todos.length == ",todos.length,"\n!!todos.length == ",!!todos.length)}
-          {console.log("output header Todo Items")}
+          {console.log("todos.length == ",todos.length)}{console.log("!!todos.length == ",!!todos.length)}
+          {console.log("<h1>Todo Items</h1>")}
           <h1>Todo Items</h1>
-          {console.log("output ul")}
+          {console.log("<ul>")}
           <ul className="todolist">
-            {console.log("inside the ul")}
+            {console.log("START ul")}
             {console.log("todos == ", todos)}
             {todos
               /// studying .filter and .map
@@ -64,8 +65,9 @@ export default function TodoList({
               .filter((i) => {
                 console.log("inside .filter((i) => {")
                 console.log("i == ", i)
+                console.log("!i.completed == ", !i.completed)
                 return (
-                !i.completed
+                  !i.completed
               )})
               /// for now just understand this gives an array of all elements where completed == false
               
@@ -74,6 +76,7 @@ export default function TodoList({
               .map((todo) => {
                 console.log("inside .map((todo) => {")
                 console.log("todo == ", todo)
+                console.log("return(<Todo and set props")
                 return (
                   <Todo
                     key={todo.id}
@@ -84,7 +87,8 @@ export default function TodoList({
                   />
                 )
               })}
-            {console.log("todos == ", todos)}  
+            {console.log("todos == ", todos)}
+            {console.log("END ul")}  
           </ul>
           <h1>Completed Items </h1>
           <ul className="todolist">

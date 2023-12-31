@@ -7,12 +7,12 @@ const rootElement = document.getElementById("root")
 const root = createRoot(rootElement)
 
 root .render(
-  <StrictMode>
+  // <StrictMode>
   <>
-    {console.log("index.js Basic Todo List Evelyn")}
+    {console.log("<h1>Basic Todo List Evelyn</h1>")}
     <h1>Basic Todo List Evelyn</h1>
-    {console.log("index.js call App.js")}
+    {console.log("<App />")}
     <App />
   </>
-  </StrictMode>
+  // </StrictMode>
 )
