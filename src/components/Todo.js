@@ -1,6 +1,7 @@
 import { useState } from "react"
 
 export default function Todo({ todo, completeTodo, editTodoText, deleteTodo}){
+  console.log("START COMPONENT Todo.js")
   console.log("todo == ", todo)
 
   console.log("const [showInput, setShowInput] = useState(false)")
@@ -8,6 +9,7 @@ export default function Todo({ todo, completeTodo, editTodoText, deleteTodo}){
   console.log("showInput == ", showInput)
   return (
     <li>
+      {console.log("BEGIN COMPONENT Todo.js return")}
       {console.log("<Todo> component returns a list item (<li>)")}
       {console.log("<li>")}
       <div className="left">
@@ -62,6 +64,7 @@ export default function Todo({ todo, completeTodo, editTodoText, deleteTodo}){
       >
         Delete Todo
       </button>
+      {console.log("END COMPONENT Todo.js")}
     </li>
   )
 }

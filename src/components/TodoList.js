@@ -7,9 +7,11 @@ export default function TodoList({
   editTodoText,
   deleteTodo
 }) {
+  console.log("START COMPONENT TodoList.js")
   console.log("todos == ", todos)
   return (
     <>
+      {console.log("BEGIN COMPONENT TodoList.js return")}
       {console.log("<h1>Create Todo</h1>")}
       <h1>Create Todo</h1>
       {console.log("<input")}
@@ -115,10 +117,11 @@ export default function TodoList({
         </>
       ) : (
         <>
-          {console.log("output header: No Todos Added Yet")}
+          {console.log("<h1>No Todos Added Yet</h1>")}
           <h1>No Todos Added Yet</h1>
         </>
       )}
+      {console.log("END COMPONENT TodoList.js")}
     </>
   )
 }
