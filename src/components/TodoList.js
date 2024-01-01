@@ -98,13 +98,17 @@ export default function TodoList({
               .filter((i) => i.completed)
               .map((todo) => {
                 return (
-                  <Todo
-                    key={todo.id}
-                    todo={todo}
-                    completeTodo={completeTodo}
-                    editTodoText={editTodoText}
-                    deleteTodo={deleteTodo}
-                  />
+                  <>
+                    {console.log("<Todo and set props")}
+                    {console.log("todo = ", todo)}
+                    <Todo
+                      key={todo.id}
+                      todo={todo}
+                      completeTodo={completeTodo}
+                      editTodoText={editTodoText}
+                      deleteTodo={deleteTodo}
+                    />
+                  </>
                 )
               })}
           </ul>
