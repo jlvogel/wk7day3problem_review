@@ -11,8 +11,11 @@ export default function Todo({ todo, completeTodo, editTodoText, deleteTodo}){
         <h2
           onClick={(e) => {
             setShowInput(!showInput) /// toggles the state
+            console.log("list item clicked")
+            console.log("toggle show input box that allows you to change the name of the list item")
           }}
         >
+          {console.log("todo.text == ", todo.text)}
           {todo.text}
         </h2>
         <input

@@ -31,7 +31,8 @@ export default function TodoList({
           // took me long enough to realize this - so simple!!!
         }}
       />
-      {console.log("todos.length == ",todos.length)}{console.log("!!todos.length == ",!!todos.length)}
+      {console.log("todos.length == ",todos.length)}
+      {console.log("!!todos.length == ",!!todos.length)}
       {todos.length ? (
         <>
           {console.log("<h1>Todo Items</h1>")}
