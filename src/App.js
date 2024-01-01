@@ -69,6 +69,11 @@ export default function App() {
   return (
     <div className="App">
     {console.log("<TodoList and set props")}
+    {console.log("todos = ", todos)}
+    {/* {console.log("addTodo = ", addTodo)}
+    {console.log("completeTodo = ", completeTodo)}
+    {console.log("editTodoText = ", editTodoText)}
+    {console.log("deleteTodo = ", deleteTodo)} */}
       <TodoList
         todos={todos}
         addTodo={addTodo}

@@ -7,6 +7,7 @@ export default function TodoList({
   editTodoText,
   deleteTodo
 }) {
+  console.log("todos == ", todos)
   return (
     <>
       {console.log("<h1>Create Todo</h1>")}
@@ -30,9 +31,9 @@ export default function TodoList({
           // took me long enough to realize this - so simple!!!
         }}
       />
+      {console.log("todos.length == ",todos.length)}{console.log("!!todos.length == ",!!todos.length)}
       {todos.length ? (
         <>
-          {console.log("todos.length == ",todos.length)}{console.log("!!todos.length == ",!!todos.length)}
           {console.log("<h1>Todo Items</h1>")}
           <h1>Todo Items</h1>
           {console.log("<ul>")}
@@ -109,8 +110,6 @@ export default function TodoList({
         </>
       ) : (
         <>
-          {console.log("todos.length == ",todos.length,"\n!!todos.length == ",!!todos.length)}
-
           {console.log("output header: No Todos Added Yet")}
           <h1>No Todos Added Yet</h1>
         </>
