@@ -17,11 +17,13 @@ export default function Todo({ todo, completeTodo, editTodoText, deleteTodo}){
         {console.log("<h2")}
         <h2
           onClick={(e) => {
+            console.log("BEGIN FUNCTION onClick(e)")
             console.log("setShowInput(!showInput)")
             console.log("This toggles the state")
             setShowInput(!showInput) /// toggles the state
             console.log("list item clicked")
             console.log("toggle show input box that allows you to change the name of the list item")
+            console.log("END FUNCTION onClick(e)")
           }}
         >
           {console.log("todo.text == ", todo.text)}

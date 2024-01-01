@@ -4,8 +4,9 @@ import TodoList from "./components/TodoList"
 
 export default function App() {
 
+  console.log("")
   console.log("START App.js")
-  console.log("const [todos, setTodos] = useState([])")
+  console.log("  const [todos, setTodos] = useState([])")
 
   const [todos, setTodos] = useState([])
   /// todos is the state
@@ -14,24 +15,24 @@ export default function App() {
 
   const addTodo = (e) => {
   /// addTodo is a function that takes in a parameter e
-    console.log(`START FUNCTION addTodo(e)`)
-    console.log(`const newTodo = { text: e.target.value, id: Date.now(), completed: false }`)
+    console.log(`  START FUNCTION addTodo(e)`)
+    console.log(`    const newTodo = { text: e.target.value, id: Date.now(), completed: false }`)
     const newTodo = { text: e.target.value, id: Date.now(), completed: false }
     /// newTodo is an object with 3 key-value pairs (text, id, and completed properties)
-    console.log(`newTodo == `, newTodo)
-    console.log('todos == ', todos)
-    console.log(`[newTodo, ...todos] == `,[newTodo, ...todos])
-    console.log(`setTodos([newTodo, ...todos]) // useState Hook!`)
+    console.log(`    newTodo == `, newTodo)
+    console.log('    todos == ', todos)
+    console.log(`    [newTodo, ...todos] == `,[newTodo, ...todos])
+    console.log(`    setTodos([newTodo, ...todos]) // useState Hook!`)
 
     setTodos([newTodo, ...todos])
     /// from before setTodos is the function that updates the state todos.  Best I can tell right now the state that setTodos will set todos to will be an array with 2 elemnents: newTodo, and ...todos.  todos is the state before setTodos updates it.   ... is the spread operator, which takes the elements in an array and pulls them out individually so the 2nd element could actually be more than one element.  We can see that initially todos is a blank array.   I am creating a test.js to understand this better.  Yep!  That's exactly what it does!
 
-    console.log("todos == ", todos)
+    console.log("    todos == ", todos)
 
-    console.log("e.target.value = \"\"")
+    console.log("    e.target.value = \"\"")
     e.target.value = "" /// sets the target to empty string
 
-    console.log("END FUNCTION addTodo(e)")
+    console.log("  END FUNCTION addTodo(e)")
   }
 
   const completeTodo = (id, e) => {
