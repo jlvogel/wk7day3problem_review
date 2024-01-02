@@ -8,33 +8,38 @@ export default function TodoList({
   deleteTodo
 }) {
   console.log("START COMPONENT TodoList.js")
-  console.log("todos == ", todos)
+  console.log("  todos == ", todos)
   return (
     <>
-      {console.log("BEGIN COMPONENT TodoList.js return")}
-      {console.log("<h1>Create Todo</h1>")}
+      {console.log("  BEGIN COMPONENT TodoList.js return")}
+      {console.log("    <h1>Create Todo</h1>")}
       <h1>Create Todo</h1>
-      {console.log("<input")}
-      <input
-        type="text"
-        onKeyDown={(e) => {
-          console.log("onKeyDown event detected")
-          e.key === "Enter" && (console.log("Enter press detected"), console.log("call addTodo(e) function which is a parameter (prop) of TodoList.js"),addTodo(e))
-          /// this is conditional rendering in react.
-          /// same as saying if e.key === "Enter" then call function addTodo(e)  looks like a simpler way of writing an if statement
+      {console.log("    <input")}
+      <>
+        <input
+          type="      text"
+          onKeyDown={(e) => {
+            console.log("      BEGIN FUNCTION onKeyDown(e)")
+            console.log("        onKeyDown event detected")
+            e.key === "Enter" && (console.log("        Enter press detected"), console.log("      call addTodo(e) function which is a parameter (prop) of TodoList.js"),addTodo(e))
+            /// this is conditional rendering in react.
+            /// same as saying if e.key === "Enter" then call function addTodo(e)  looks like a simpler way of writing an if statement
 
-          // if (e.key === "Enter") {
-          //   addTodo(e)
-          // }
+            // if (e.key === "Enter") {
+            //   addTodo(e)
+            // }
 
-          // this appears to do the same thing!  
-          // yes it does and it works in plain old js
-          // true && function calls function.
-          // took me long enough to realize this - so simple!!!
-        }}
-      />
-      {console.log("todos.length == ",todos.length)}
-      {console.log("!!todos.length == ",!!todos.length)}
+            // this appears to do the same thing!  
+            // yes it does and it works in plain old js
+            // true && function calls function.
+            // took me long enough to realize this - so simple!!!
+            console.log("      END FUNCTION onKeyDown(e)")
+          }}
+        />
+        {console.log("/>   {/* end <input> */}")}
+      </>
+      {console.log("    todos.length == ",todos.length)}
+      {console.log("    !!todos.length == ",!!todos.length)}
       {todos.length ? (
         <>
           {console.log("<h1>Todo Items</h1>")}

@@ -36,7 +36,7 @@ export default function App() {
   }
 
   const completeTodo = (id, e) => {
-    console.log("BEGIN FUNCTION completeTodo(id, e)")
+    console.log("  BEGIN FUNCTION completeTodo(id, e)")
     const todosCopy = [...todos]
     /// Hmmm since todos is an array isn't this unnecessary?  could we just set todosCopy = todos instead?  Think about it and try it later!!  Undertstand this!!!!
 
@@ -53,21 +53,21 @@ export default function App() {
     setTodos([...todosCopy])
     /// setTodos sets the state (todos) to be equal to a COPY of todosCopy array.  So todosCopy is alread a copy of todos so this would be a copy of a copy?  Best as I can tell....
 
-    console.log("END FUNCTION completeTodo(id, e)")
+    console.log("  END FUNCTION completeTodo(id, e)")
   }
 
   const editTodoText = (id, e) => {
-    console.log("BEGIN FUNCTION editTodoText(id, e)")
+    console.log("  BEGIN FUNCTION editTodoText(id, e)")
     const todosCopy = [...todos]
     const indexOfTodo = todosCopy.findIndex((i) => i.id === id)
     todosCopy[indexOfTodo].text = e.target.value
     setTodos([...todosCopy])
     e.target.value = ""
-    console.log("END FUNCTION editTodoText(id, e)")
+    console.log("  END FUNCTION editTodoText(id, e)")
   }
 
   const deleteTodo = (id) => {
-    console.log("BEGIN FUNCTION deleteTodo(id)")
+    console.log("  BEGIN FUNCTION deleteTodo(id)")
     const todosCopy = [...todos]
     const indexOfTodo = todosCopy.findIndex((i) => i.id === id)
 
@@ -75,14 +75,14 @@ export default function App() {
     /// this would remove todosCopy[indexOfTodo] from todosCopy array.
     
     setTodos([...todosCopy])
-    console.log("END FUNCTION deleteTodo(id)")
+    console.log("  END FUNCTION deleteTodo(id)")
   }
 
   return (
     <div className="App">
-      {console.log("BEGIN App.js return")}
-      {console.log("<TodoList and set props")}
-      {console.log("todos = ", todos)}
+      {console.log("  BEGIN App.js return")}
+      {console.log("    <TodoList and set props")}
+      {console.log("    todos = ", todos)}
       {/* {console.log("addTodo = ", addTodo)}
       {console.log("completeTodo = ", completeTodo)}
       {console.log("editTodoText = ", editTodoText)}
