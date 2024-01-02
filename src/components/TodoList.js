@@ -40,14 +40,16 @@ export default function TodoList({
       </>
       {console.log("    todos.length == ",todos.length)}
       {console.log("    !!todos.length == ",!!todos.length)}
+      {console.log("")}
+      {console.log("    {todos.length ? (")}
       {todos.length ? (
         <>
-          {console.log("<h1>Todo Items</h1>")}
+          {console.log("      <h1>Todo Items</h1>")}
           <h1>Todo Items</h1>
-          {console.log("<ul>")}
+          {console.log("      <ul>")}
           <ul className="todolist">
-            {console.log("START ul")}
-            {console.log("todos == ", todos)}
+            {console.log("      START ul")}
+            {console.log("        todos == ", todos)}
             {todos
               /// studying .filter and .map
               /// need to understand callback functions
