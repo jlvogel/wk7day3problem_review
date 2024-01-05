@@ -1,3 +1,5 @@
+console.log("Todo.js Todo.js Todo.js  Todo.js")
+
 import { useState } from "react"
 
 export default function Todo({ todo, completeTodo, editTodoText, deleteTodo}){

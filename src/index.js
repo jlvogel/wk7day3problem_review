@@ -9,7 +9,10 @@ const rootElement = document.getElementById("root")
 const root = createRoot(rootElement)
 
 root .render(
-  // <StrictMode>
+  // <StrictMode> // Note commenting out these StrictMode tags
+                  // gets rid of duplicate console logs.  Not exactly
+                  // sure why at them moment - something to look into 
+                  // later.
   <>
     {console.log("  START root.render(<></>)")}
     {console.log("    <h1>Basic Todo List Evelyn</h1>")}

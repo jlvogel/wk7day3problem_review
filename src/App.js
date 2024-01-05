@@ -1,3 +1,5 @@
+console.log("App.js App.js  App.js  App.js")
+
 import "./styles.css";
 import { useState, useEffect } from "react"
 import TodoList from "./components/TodoList"
