@@ -1,4 +1,5 @@
-console.log("TodoList.js  TodoList.js   TodoList.js")
+console.log("")
+console.log("START OF FILE TodoList.js")
 
 import Todo from "./Todo"
 
@@ -9,6 +10,7 @@ export default function TodoList({
   editTodoText,
   deleteTodo
 }) {
+  console.log("")
   console.log("START COMPONENT TodoList.js")
   console.log("  todos == ", todos)
   return (
@@ -21,6 +23,10 @@ export default function TodoList({
         <input
           type="      text"
           onKeyDown={(e) => {
+            console.log("")
+            console.log("")
+            console.log("******************************************")
+            console.log("")
             console.log("      BEGIN FUNCTION onKeyDown(e)")
             console.log("        onKeyDown event detected")
             e.key === "Enter" && (console.log("        Enter press detected"), console.log("      call addTodo(e) function which is a parameter (prop) of TodoList.js"),addTodo(e))
@@ -134,3 +140,5 @@ export default function TodoList({
     </>
   )
 }
+
+console.log("END OF FILE TodoList.js")

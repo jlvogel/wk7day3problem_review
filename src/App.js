@@ -1,16 +1,19 @@
-console.log("App.js App.js  App.js  App.js")
+console.log(`
+START OF FILE App.js`)
 
 import "./styles.css";
 import { useState, useEffect } from "react"
 import TodoList from "./components/TodoList"
 
 export default function App() {
-
-  console.log("")
-  console.log("START App.js")
-  console.log("  const [todos, setTodos] = useState([])")
-
+  
   const [todos, setTodos] = useState([])
+
+console.log(`
+START FUNCTION App()
+  const [todos, setTodos] = useState([])
+  todos == `, todos)
+
   /// todos is the state
   /// setTodos is the function that will update the state
   /// initial state value is blank array
@@ -82,8 +85,9 @@ export default function App() {
 
   return (
     <div className="App">
-      {console.log("  BEGIN App.js return")}
+    {console.log("  BEGIN App.js return (<div className=\"App\"></div>")}
       {console.log("    <TodoList and set props")}
+
       {console.log("    todos = ", todos)}
       {/* {console.log("addTodo = ", addTodo)}
       {console.log("completeTodo = ", completeTodo)}
@@ -96,7 +100,12 @@ export default function App() {
           editTodoText={editTodoText}
           deleteTodo={deleteTodo}
         />
-      {console.log("END App.js")}
+
+    {console.log("  END App.js return (<div className=\"App\"></div>")}
+
+{console.log(`END FUNCTION App()`)}
     </div>
   )
 }
+
+console.log("END OF FILE App.js")
