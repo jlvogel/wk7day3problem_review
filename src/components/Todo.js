@@ -95,6 +95,3 @@ export default function Todo({ todo, completeTodo, editTodoText, deleteTodo}){
     </li>
   )
 }
-
-console.log(`END OF FILE Todo.js
- `)
