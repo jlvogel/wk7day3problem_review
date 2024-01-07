@@ -7,13 +7,11 @@ import TodoList from "./components/TodoList"
 
 export default function App() {
 
-console.log(`
-export default function App() {`)
-
-
   const [todos, setTodos] = useState([])
 
-  console.log(`
+console.log(`
+export default function App() {
+
   const [todos, setTodos] = useState([])
   
   *********** VARIABLE VALUE **********
@@ -30,7 +28,7 @@ export default function App() {`)
   return (
     <div className="App">
         <TodoList
-          todos={todos}
+          todos={todos}     // todos={`,todos,`}
           addTodo={addTodo}
           completeTodo={completeTodo}
           editTodoText={editTodoText}

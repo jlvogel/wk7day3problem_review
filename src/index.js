@@ -1,7 +1,6 @@
 console.log(`
-START OF FILE index.js`)
+START OF FILE index.js
 
-console.log(`
   import { createRoot } from "react-dom/client"
   import App from "./App"
 
@@ -14,6 +13,8 @@ console.log(`
       <App />
     </>
   )
+
+END OF FILE index.js
  `)
 
 import { StrictMode } from "react" // currently not used because 
@@ -39,6 +40,3 @@ root .render(
 
   // </StrictMode>
 )
-
-console.log(`END OF FILE index.js
- `)

@@ -1,5 +1,26 @@
 console.log(`
-START OF FILE Todo.js`)
+START OF FILE Todo.js
+
+  import { useState } from "react"
+
+                     _______________
+ ___________________/ FUNCTION LIST \\__________________
+|                                                      |
+| export default function Todo({                       |
+|   todo,                                              |
+|   completeTodo,                                      |
+|   editTodoText,                                      |
+|   deleteTodo                                         |
+| }) {                                                 |
+|   const [showInput, setShowInput] = useState(false)  |
+|   return (                                           |
+|     <li>...........</li>                             |
+|   )                                                  |
+| }                                                    |
+|______________________________________________________|
+
+END OF FILE Todo.js
+ `)
 
 import { useState } from "react"
 
