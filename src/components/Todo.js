@@ -1,5 +1,5 @@
-console.log("")
-console.log("START OF FILE Todo.js")
+console.log(`
+START OF FILE Todo.js`)
 
 import { useState } from "react"
 
@@ -75,4 +75,5 @@ export default function Todo({ todo, completeTodo, editTodoText, deleteTodo}){
   )
 }
 
-console.log("END OF FILE Todo.js")
+console.log(`END OF FILE Todo.js
+ `)

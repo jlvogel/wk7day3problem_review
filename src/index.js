@@ -13,7 +13,8 @@ console.log(`
       <h1>Basic Todo List Evelyn</h1>
       <App />
     </>
-  )`)
+  )
+ `)
 
 import { StrictMode } from "react" // currently not used because 
                                    // tags commented out to avoid duplicate
@@ -30,12 +31,14 @@ root .render(
                   // gets rid of duplicate console logs.  Not exactly
                   // sure why at them moment - something to look into 
                   // later.
+
   <>  {/*<> is a fragment tag*/}
     <h1>Basic Todo List Evelyn</h1>
     <App />
   </>
+
   // </StrictMode>
 )
 
-console.log(`
-END OF FILE index.js`)
+console.log(`END OF FILE index.js
+ `)

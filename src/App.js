@@ -6,13 +6,40 @@ import { useState, useEffect } from "react"
 import TodoList from "./components/TodoList"
 
 export default function App() {
-  
-  const [todos, setTodos] = useState([])
 
 console.log(`
-START FUNCTION App()
+export default function App() {`)
+
+
   const [todos, setTodos] = useState([])
-  todos == `, todos)
+
+  console.log(`
+  const [todos, setTodos] = useState([])
+  
+  *********** VARIABLE VALUE **********
+  todos == `, todos, `
+  *************************************
+  
+  *********** FUNCTION LIST ***********
+  const addTodo = (e) => {}
+  const completeTodo = (id, e) => {}
+  const editTodoText = (id, e) => {}
+  const deleteTodo = (id) => {}
+  *************************************
+  
+  return (
+    <div className="App">
+        <TodoList
+          todos={todos}
+          addTodo={addTodo}
+          completeTodo={completeTodo}
+          editTodoText={editTodoText}
+          deleteTodo={deleteTodo}
+        />
+    </div>
+  )
+}
+ `)
 
   /// todos is the state
   /// setTodos is the function that will update the state
@@ -85,14 +112,6 @@ START FUNCTION App()
 
   return (
     <div className="App">
-    {console.log("  BEGIN App.js return (<div className=\"App\"></div>")}
-      {console.log("    <TodoList and set props")}
-
-      {console.log("    todos = ", todos)}
-      {/* {console.log("addTodo = ", addTodo)}
-      {console.log("completeTodo = ", completeTodo)}
-      {console.log("editTodoText = ", editTodoText)}
-      {console.log("deleteTodo = ", deleteTodo)} */}
         <TodoList
           todos={todos}
           addTodo={addTodo}
@@ -100,12 +119,9 @@ START FUNCTION App()
           editTodoText={editTodoText}
           deleteTodo={deleteTodo}
         />
-
-    {console.log("  END App.js return (<div className=\"App\"></div>")}
-
-{console.log(`END FUNCTION App()`)}
     </div>
   )
 }
 
-console.log("END OF FILE App.js")
+console.log(`END OF FILE App.js
+ `)
