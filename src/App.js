@@ -59,7 +59,7 @@ export default function App() {
     return (
         <div className="App">
             <TodoList
-                todos={todos}             // todos={`,todos,`}
+                todos={todos}                 // todos={`,todos,`}
                 addTodo={addTodo}
                 completeTodo={completeTodo}
                 editTodoText={editTodoText}

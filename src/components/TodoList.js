@@ -31,9 +31,100 @@ export default function TodoList({
   editTodoText,
   deleteTodo
 }) {
-  console.log("")
-  console.log("START COMPONENT TodoList.js")
-  console.log("  todos == ", todos)
+
+console.log(`
+export default function TodoList({
+  todos,
+  addTodo,
+  completeTodo,
+  editTodoText,
+  deleteTodo
+}) {
+             ________________
+  __________/ VARIABLE VALUE \\__________
+ |
+ |  todos == `, todos, `
+ |______________________________________
+
+    return (
+        <>
+            <h1>Create Todo</h1>
+
+            <input
+                type="text"
+                onKeyDown={(e) => {
+                    e.key === "Enter" && addTodo(e)
+                }}
+            />
+${`\x1b[34m`}
+                    ________________
+         __________/ VARIABLE VALUE \\__________
+        |
+        |   todos == `, todos, `
+        |   todos.length == `, todos.length, `
+        |   !!todos.length == `, !!todos.length, `
+        |______________________________________
+
+            {todos.length ? (
+                <>
+                    <h1>Todo Items</h1>
+
+                    <ul class Name="todolist">
+                        {todos
+
+                            .filter((i) => !i.completed)
+
+                            .map((todo) => {
+
+                                return (
+                                    <Todo
+                                        key={todo.id}
+                                        todo={todo}
+                                        completeTodo={completeTodo}
+                                        editTodoText={editTodoText}
+                                        deleteTodo={deleteTodo}
+                                    />
+                                )
+                            })
+                        }
+
+                    </ul>
+
+                    <h1>Completed Items</h1>
+
+                    <ul class Name="todolist">
+
+                        {todos
+
+                            .filter((i) => i.completed)
+
+                            .map((todo) => {
+
+                                return (
+                                    <Todo
+                                        key={todo.id}
+                                        todo={todo}
+                                        completeTodo={completeTodo}
+                                        editTodoText={editTodoText}
+                                        deleteTodo={deleteTodo}
+                                    />
+                                )
+                            })
+                        }
+
+                    </ul>
+                </>
+
+            ) : (
+
+                <h1>No Todos Added Yet</h1>
+            )}
+        </>
+    )
+}
+ `)
+
+
   return (
     <>
       {console.log("  BEGIN COMPONENT TodoList.js return")}
@@ -42,7 +133,7 @@ export default function TodoList({
       {console.log("    <input")}
       <>
         <input
-          type="      text"
+          type="text"
           onKeyDown={(e) => {
             console.log("")
             console.log("")

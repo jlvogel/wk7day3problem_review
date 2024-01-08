@@ -1,3 +1,10 @@
+console.log(`Hello people %cHello World`, `color:blue`,`test message
+${"\x1b[34m"}some colorful text string${"\x1b[0m"} rest of string in normal color`);
+
+console.log("%c%s %c%s %c%s", 'color: red', 'text 1', 'color: green', 'text 2', 'color: blue', 'text 3')
+
+console.log(`%c%s %c%s %c%s`, `color: red`, `text 1`, `color: green`, `text 2`, `color: blue`, `text 3`)
+
 console.log(`
 START OF FILE Todo.js
 
