@@ -1,5 +1,34 @@
 console.log(`
-START OF FILE App.js`)
+START OF FILE App.js
+
+import "./styles.css";
+import { useState, useEffect } from "react"
+import TodoList from "./components/TodoList"
+
+                    _______________
+___________________/ FUNCTION LIST \\___________________
+|                                                      |
+|   export default function App() {                    |
+|                                                      |
+|       const [todos, setTodos] = useState([])         |
+|                                                      |
+|             ______________________                   |
+|     _______/ NESTED FUNCTION LIST \\_______           |
+|    |                                      |          |
+|    |  addTodo                             |          |
+|    |  completeTodo                        |          |
+|    |  editTodoText                        |          |
+|    |  deleteTodo                          |          |
+|    |______________________________________|          |
+|                                                      |
+|       return (                                       |
+|           <div className = "App">.......</div>       |
+|       )                                              |
+|   }                                                  |
+|______________________________________________________|
+
+END OF FILE App.js
+ `)
 
 import "./styles.css";
 import { useState, useEffect } from "react"
@@ -12,30 +41,32 @@ export default function App() {
 console.log(`
 export default function App() {
 
-  const [todos, setTodos] = useState([])
+    const [todos, setTodos] = useState([])
   
-  *********** VARIABLE VALUE **********
-  todos == `, todos, `
-  *************************************
+  ___________ VARIABLE VALUE __________
+ |
+ |  todos == `, todos, `
+ |_____________________________________
   
-  *********** FUNCTION LIST ***********
-  const addTodo = (e) => {}
-  const completeTodo = (id, e) => {}
-  const editTodoText = (id, e) => {}
-  const deleteTodo = (id) => {}
-  *************************************
+  ___________ FUNCTION LIST ___________
+ |                                     |
+ |  const addTodo = (e) => {}          |
+ |  const completeTodo = (id, e) => {} |
+ |  const editTodoText = (id, e) => {} |
+ |  const deleteTodo = (id) => {}      |
+ |_____________________________________|
   
-  return (
-    <div className="App">
-        <TodoList
-          todos={todos}     // todos={`,todos,`}
-          addTodo={addTodo}
-          completeTodo={completeTodo}
-          editTodoText={editTodoText}
-          deleteTodo={deleteTodo}
-        />
-    </div>
-  )
+    return (
+        <div className="App">
+            <TodoList
+                todos={todos}     // todos={`,todos,`}
+                addTodo={addTodo}
+                completeTodo={completeTodo}
+                editTodoText={editTodoText}
+                deleteTodo={deleteTodo}
+            />
+        </div>
+    )
 }
  `)
 
@@ -120,6 +151,3 @@ export default function App() {
     </div>
   )
 }
-
-console.log(`END OF FILE App.js
- `)
