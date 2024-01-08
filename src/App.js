@@ -42,13 +42,13 @@ console.log(`
 export default function App() {
 
     const [todos, setTodos] = useState([])
-  
-  ___________ VARIABLE VALUE __________
+             ________________
+  __________/ VARIABLE VALUE \\__________
  |
  |  todos == `, todos, `
- |_____________________________________
-  
-  ___________ FUNCTION LIST ___________
+ |______________________________________
+             _______________
+  __________/ FUNCTION LIST \\__________
  |                                     |
  |  const addTodo = (e) => {}          |
  |  const completeTodo = (id, e) => {} |
@@ -59,7 +59,7 @@ export default function App() {
     return (
         <div className="App">
             <TodoList
-                todos={todos}     // todos={`,todos,`}
+                todos={todos}             // todos={`,todos,`}
                 addTodo={addTodo}
                 completeTodo={completeTodo}
                 editTodoText={editTodoText}

@@ -1,23 +1,23 @@
 console.log(`
 START OF FILE TodoList.js
 
-  import Todo from "./Todo"
+    import Todo from "./Todo"
 
-                       _______________
-   ___________________/ FUNCTION LIST \\__________________
-  |                                                      |
-  | export default function TodoList({                   |
-  |   todos,                                             |
-  |   addTodo,                                           |
-  |   completeTodo,                                      |
-  |   editTodoText,                                      |
-  |   deleteTodo                                         |
-  | }) {                                                 |
-  |   return (                                           |
-  |     <>...........</>                                 |
-  |   )                                                  |
-  | }                                                    |
-  |______________________________________________________|
+                    _______________
+ __________________/ FUNCTION LIST \\___________________
+|                                                      |
+|   export default function TodoList({                 |
+|       todos,                                         |
+|       addTodo,                                       |
+|       completeTodo,                                  |
+|       editTodoText,                                  |
+|       deleteTodo                                     |
+|   }) {                                               |
+|       return (                                       |
+|           <>...........</>                           |
+|       )                                              |
+|   }                                                  |
+|______________________________________________________|
 
 END OF FILE TodoList.js
  `)
