@@ -1,4 +1,4 @@
-console.log(`
+console.log(`%c%s %c%s %c%s`, `color:inherit`, `
 START OF FILE index.js
 
   import { createRoot } from "react-dom/client"
@@ -9,8 +9,8 @@ START OF FILE index.js
 
   root .render(
     <>
-      <h1>Basic Todo List Evelyn</h1>
-      <App />
+      <h1>Basic Todo List Evelyn</h1>`, `background-color:darkcyan`, `
+      <App />`, `color:inherit`, `
     </>
   )
 

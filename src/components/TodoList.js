@@ -32,19 +32,20 @@ export default function TodoList({
   deleteTodo
 }) {
 
-console.log(`
+console.log(`%c%s %c%s %c%s %c%s %c%s %c%s %o %c%s %c%s %o %c%s %c%s %o %c%s`,`color: inherit`, `
 export default function TodoList({
   todos,
   addTodo,
   completeTodo,
   editTodoText,
   deleteTodo
-}) {
+}) {`, `color:orangered`,`
              ________________
-  __________/ VARIABLE VALUE \\__________
- |
- |  todos == `, todos, `
- |______________________________________
+  __________/ VARIABLE VALUE \\__________`, `color:orangered; font-size:20px`,
+  `
+  
+      todos == [${todos}]`, `color:orangered`, `
+  ______________________________________`, `color:inherit`, `
 
     return (
         <>
@@ -60,9 +61,9 @@ export default function TodoList({
                     ________________
          __________/ VARIABLE VALUE \\__________
         |
-        |   todos == `, todos, `
-        |   todos.length == `, todos.length, `
-        |   !!todos.length == `, !!todos.length, `
+        |   `, `background-color:orangered`, `todos == `, todos, `background-color:inherit`, `
+        |   `, `background-color:orangered`, `todos.length == `, todos.length, `backrgound-color:inherit`, `
+        |   `, `background-color:orangered`, `!!todos.length == `, !!todos.length, `background-color:inherit`, `
         |______________________________________
 
             {todos.length ? (
