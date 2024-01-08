@@ -1,9 +1,18 @@
-console.log(`Hello people %cHello World`, `color:blue`,`test message
-${"\x1b[34m"}some colorful text string${"\x1b[0m"} rest of string in normal color`);
+// console.log(
+//   "This is %cMy stylish message",
+//   "color: white; font-style: italic; background-color: blue;padding: 10px",
+// );
 
-console.log("%c%s %c%s %c%s", 'color: red', 'text 1', 'color: green', 'text 2', 'color: blue', 'text 3')
+// console.log(`Hello people %cHello World`, `color:blue`,`test message
+// ${"\x1b[34m"}some colorful text string${"\x1b[0m"} rest of string in normal color`);
 
-console.log(`%c%s %c%s %c%s`, `color: red`, `text 1`, `color: green`, `text 2`, `color: blue`, `text 3`)
+// console.log("%c%s %c%s %c%s", 'color: red', 'text 1', 'color: green', 'text 2', 'color: blue', 'text 3')
+
+// console.log(`%c%s %c%s %c%s`, `color: red`, `text 1`, `color: green`, `text 2`, `color: blue`, `text 3`)
+
+let myArray = [1,2]
+
+console.log(`%c%s`,`color:red; font-size:20px `, `[${myArray}]`)
 
 console.log(`
 START OF FILE Todo.js

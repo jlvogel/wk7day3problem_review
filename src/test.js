@@ -1,4 +1,5 @@
-// const todos = [1,2,3]
+const todos = [1,2,3]
+console.log(...todos)
 
 // // setTodos = () => {
 // //   let value = 2
@@ -14,8 +15,9 @@
 
 // false && console.log("hello")
 
-console.log([-3,-2,-1,0,1,2,3]
+// console.log([-3,-2,-1,0,1,2,3]
 
 
   
-.filter((i)=> i>0))
+// .filter((i)=> i>0))
+

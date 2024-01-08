@@ -38,15 +38,15 @@ export default function App() {
 
   const [todos, setTodos] = useState([])
 
-console.log(`
+console.log(`%c%s %c%s %c%s %o %c%s %c%s`,`color:white`,`
 export default function App() {
 
-    const [todos, setTodos] = useState([])
+    const [todos, setTodos] = useState([])`,`color:orange`,`
              ________________
   __________/ VARIABLE VALUE \\__________
  |
- |  todos == `, todos, `
- |______________________________________
+ | `, `color:white`, `todos == `, todos, `color:orange`, `
+ |______________________________________`, `color:white`, `
              _______________
   __________/ FUNCTION LIST \\__________
  |                                     |

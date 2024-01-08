@@ -56,7 +56,7 @@ export default function TodoList({
                     e.key === "Enter" && addTodo(e)
                 }}
             />
-${`\x1b[34m`}
+
                     ________________
          __________/ VARIABLE VALUE \\__________
         |
