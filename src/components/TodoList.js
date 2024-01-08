@@ -128,10 +128,7 @@ export default function TodoList({
 
   return (
     <>
-      {console.log("  BEGIN COMPONENT TodoList.js return")}
-      {console.log("    <h1>Create Todo</h1>")}
       <h1>Create Todo</h1>
-      {console.log("    <input")}
       <>
         <input
           type="text"
@@ -157,12 +154,7 @@ export default function TodoList({
             console.log("      END FUNCTION onKeyDown(e)")
           }}
         />
-        {console.log("/>   {/* end <input> */}")}
       </>
-      {console.log("    todos.length == ",todos.length)}
-      {console.log("    !!todos.length == ",!!todos.length)}
-      {console.log("")}
-      {console.log("    {todos.length ? (")}
       {todos.length ? (
         <>
           {console.log("      <h1>Todo Items</h1>")}
@@ -244,12 +236,8 @@ export default function TodoList({
           </ul>
         </>
       ) : (
-        <>
-          {console.log("<h1>No Todos Added Yet</h1>")}
-          <h1>No Todos Added Yet</h1>
-        </>
+        <h1>No Todos Added Yet</h1>
       )}
-      {console.log("END COMPONENT TodoList.js")}
     </>
   )
 }
