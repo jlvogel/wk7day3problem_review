@@ -38,15 +38,18 @@ export default function App() {
 
   const [todos, setTodos] = useState([])
 
-console.log(`%c%s %c%s %c%s %o %c%s %c%s`,`color:white`,`
+console.log(`%c%s %c%s %c%s %c%s %c%s`,`color: inherit`, `
 export default function App() {
 
     const [todos, setTodos] = useState([])`,`color:orange`,`
+
              ________________
-  __________/ VARIABLE VALUE \\__________
- |
- | `, `color:white`, `todos == `, todos, `color:orange`, `
- |______________________________________`, `color:white`, `
+  __________/ VARIABLE VALUE \\__________`, `color:orange; font-size:20px`,
+  `
+  
+      todos == [${todos}]`, `color:orange`, `
+  ______________________________________`, `color:inherit`, `
+
              _______________
   __________/ FUNCTION LIST \\__________
  |                                     |
