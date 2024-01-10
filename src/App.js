@@ -38,7 +38,7 @@ export default function App() {
 
   const [todos, setTodos] = useState([])
 
-console.log(`%c%s %c%s %c%s %c%s %c%s %c%s %o %c%s %c%s`,`color: inherit`, `
+console.log(`%c%s %c%s %c%s %c%s %c%s %c%s %c%s %c%s %o %c%s %c%s %c%s %c%s`,`color: inherit`, `
 export default function App() {
 
     const [todos, setTodos] = useState([])`,`color:orangered`,`
@@ -61,13 +61,13 @@ export default function App() {
   
     return (
         <div className="App">
-            <TodoList
+        `,`background-color:darkcyan`, `<TodoList`,`background-color: inherit`, `
                 todos={todos}                 `, `background-color: orangered`, `// todos={`, todos,`background-color: orangered`,`}`, `background-color: inherit`, `
                 addTodo={addTodo}
                 completeTodo={completeTodo}
                 editTodoText={editTodoText}
                 deleteTodo={deleteTodo}
-            />
+                `,`background-color:darkcyan`, `/>`,`background-color:inherit`, `
         </div>
     )
 }

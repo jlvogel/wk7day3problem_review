@@ -32,7 +32,7 @@ export default function TodoList({
   deleteTodo
 }) {
 
-console.log(`%c%s %c%s %c%s %c%s %c%s %c%s %o %c%s %c%s %o %c%s %c%s %o %c%s`,`color: inherit`, `
+console.log(`%c%s %c%s %c%s %c%s %c%s %c%s %o %c%s %c%s %o %c%s %c%s %o %c%s %c%s %c%s %c%s %c%s %c%s %c%s %c%s %c%s`,`color: inherit`, `
 export default function TodoList({
   todos,
   addTodo,
@@ -78,13 +78,13 @@ export default function TodoList({
                             .map((todo) => {
 
                                 return (
-                                    <Todo
+                                    `, `background-color:darkcyan`, `<Todo`, `background-color: inherit`, `
                                         key={todo.id}
                                         todo={todo}
                                         completeTodo={completeTodo}
                                         editTodoText={editTodoText}
                                         deleteTodo={deleteTodo}
-                                    />
+                                    `, `background-color: darkcyan`, `/>`, `background-color: inherit`, `
                                 )
                             })
                         }
@@ -102,13 +102,13 @@ export default function TodoList({
                             .map((todo) => {
 
                                 return (
-                                    <Todo
+                                    `, `background-color:darkcyan`, `<Todo`, `background-color: inherit`, `
                                         key={todo.id}
                                         todo={todo}
                                         completeTodo={completeTodo}
                                         editTodoText={editTodoText}
                                         deleteTodo={deleteTodo}
-                                    />
+                                    `, `background-color: darkcyan`, `/>`, `background-color: inherit`, `
                                 )
                             })
                         }
@@ -133,12 +133,13 @@ export default function TodoList({
         <input
           type="text"
           onKeyDown={(e) => {
-            console.log("")
-            console.log("")
-            console.log("******************************************")
-            console.log("")
-            console.log("      BEGIN FUNCTION onKeyDown(e)")
-            console.log("        onKeyDown event detected")
+          console.log(`
+                onKeyDown={(e) => {
+                    e === `, e, `
+                    e.key === `, e.key, `
+                    (e.key === "Enter") === `, e.key === "Enter", `
+                    e.key === "Enter" && addTodo(e)
+                }}`)
             e.key === "Enter" && (console.log("        Enter press detected"), console.log("      call addTodo(e) function which is a parameter (prop) of TodoList.js"),addTodo(e))
             /// this is conditional rendering in react.
             /// same as saying if e.key === "Enter" then call function addTodo(e)  looks like a simpler way of writing an if statement
@@ -151,7 +152,6 @@ export default function TodoList({
             // yes it does and it works in plain old js
             // true && function calls function.
             // took me long enough to realize this - so simple!!!
-            console.log("      END FUNCTION onKeyDown(e)")
           }}
         />
       </>

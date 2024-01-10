@@ -9,8 +9,8 @@ START OF FILE index.js
 
   root .render(
     <>
-      <h1>Basic Todo List Evelyn</h1>`, `background-color:darkcyan`, `
-      <App />`, `color:inherit`, `
+      <h1>Basic Todo List Evelyn</h1>
+      `, `background-color:darkcyan`, `<App />`, `color:inherit`, `
     </>
   )
 
