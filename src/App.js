@@ -61,13 +61,13 @@ export default function App() {
   
     return (
         <div className="App">
-        `,`background-color:darkcyan`, `<TodoList`,`background-color: inherit`, `
+           `,`background-color:darkcyan`, `<TodoList`,`background-color: inherit`, `
                 todos={todos}                 `, `background-color: orangered`, `// todos={`, todos,`background-color: orangered`,`}`, `background-color: inherit`, `
                 addTodo={addTodo}
                 completeTodo={completeTodo}
                 editTodoText={editTodoText}
                 deleteTodo={deleteTodo}
-                `,`background-color:darkcyan`, `/>`,`background-color:inherit`, `
+           `,`background-color:darkcyan`, `/>`,`background-color:inherit`, `
         </div>
     )
 }

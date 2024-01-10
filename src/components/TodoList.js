@@ -78,13 +78,13 @@ export default function TodoList({
                             .map((todo) => {
 
                                 return (
-                                    `, `background-color:darkcyan`, `<Todo`, `background-color: inherit`, `
+                                   `, `background-color:darkcyan`, `<Todo`, `background-color: inherit`, `
                                         key={todo.id}
                                         todo={todo}
                                         completeTodo={completeTodo}
                                         editTodoText={editTodoText}
                                         deleteTodo={deleteTodo}
-                                    `, `background-color: darkcyan`, `/>`, `background-color: inherit`, `
+                                   `, `background-color: darkcyan`, `/>`, `background-color: inherit`, `
                                 )
                             })
                         }
@@ -102,13 +102,13 @@ export default function TodoList({
                             .map((todo) => {
 
                                 return (
-                                    `, `background-color:darkcyan`, `<Todo`, `background-color: inherit`, `
+                                   `, `background-color:darkcyan`, `<Todo`, `background-color: inherit`, `
                                         key={todo.id}
                                         todo={todo}
                                         completeTodo={completeTodo}
                                         editTodoText={editTodoText}
                                         deleteTodo={deleteTodo}
-                                    `, `background-color: darkcyan`, `/>`, `background-color: inherit`, `
+                                   `, `background-color: darkcyan`, `/>`, `background-color: inherit`, `
                                 )
                             })
                         }
@@ -133,10 +133,10 @@ export default function TodoList({
         <input
           type="text"
           onKeyDown={(e) => {
-          console.log(`
+          console.log(`%c%s %o %c%s %c%s %c%s`, `color:inherit`, `
                 onKeyDown={(e) => {
-                    e === `, e, `
-                    e.key === `, e.key, `
+                    e === `, e, `background-color:inherit`,`
+                   `,`background-color:orangered`,`e.key === `,`background-color:orangered`,e.key, `
                     (e.key === "Enter") === `, e.key === "Enter", `
                     e.key === "Enter" && addTodo(e)
                 }}`)
