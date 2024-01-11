@@ -39,18 +39,18 @@ export default function App() {
   const [todos, setTodos] = useState([])
 
   const consoleLog = (todos) => {
-    let s = ``
+    let s = `\n`
     todos.forEach(obj => {
       s += `{ `
       for (const key in obj) {
         s+= key + " : " + obj[key] + ",  "
       }
-      s += ` } ,   `
+      s += ` } , \n`
     })
     return s
   }
 
-console.log(`%c%s %c%s %c%s %o %c%s %c%s %c%s %c%s %c%s %c%s %o %c%s %c%s %c%s %c%s`,`color: inherit`, `
+console.log(`%c%s %c%s %c%s %s %c%s %c%s %c%s %c%s %c%s %c%s %o %c%s %c%s %c%s %c%s`,`color: inherit`, `
 export default function App() {
 
     const [todos, setTodos] = useState([])`,`color:orangered`,`
