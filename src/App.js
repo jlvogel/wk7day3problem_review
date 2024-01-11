@@ -38,6 +38,18 @@ export default function App() {
 
   const [todos, setTodos] = useState([])
 
+  const consoleLog = (todos) => {
+    let s = ``
+    todos.forEach(obj => {
+      s += `{ `
+      for (const key in obj) {
+        s+= key + " : " + obj[key] + ",  "
+      }
+      s += ` } ,   `
+    })
+    return s
+  }
+
 console.log(`%c%s %c%s %c%s %o %c%s %c%s %c%s %c%s %c%s %c%s %o %c%s %c%s %c%s %c%s`,`color: inherit`, `
 export default function App() {
 
@@ -47,7 +59,7 @@ export default function App() {
   __________/ VARIABLE VALUE \\__________`, `color:orangered; font-size:20px`,
   `
   
-      todos == [`,todos,`color:orangered; font-size:20px`,`]`, `color:orangered`, `
+      todos == [`, consoleLog(todos),`color:orangered; font-size:20px`,`]`, `color:orangered`, `
   ______________________________________`, `color:inherit`, `
 
              _______________
