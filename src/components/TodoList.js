@@ -140,7 +140,7 @@ export default function TodoList({
                     (e.key === "Enter") === `, e.key === "Enter", `
                     e.key === "Enter" && addTodo(e)
                 }}`)
-            e.key === "Enter" && (console.log("        Enter press detected"), console.log("      call addTodo(e) function which is a parameter (prop) of TodoList.js"),addTodo(e))
+            e.key === "Enter" && addTodo(e)
             /// this is conditional rendering in react.
             /// same as saying if e.key === "Enter" then call function addTodo(e)  looks like a simpler way of writing an if statement
 

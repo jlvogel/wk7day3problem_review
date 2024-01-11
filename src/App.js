@@ -38,17 +38,16 @@ export default function App() {
 
   const [todos, setTodos] = useState([])
 
-console.log(`%c%s %c%s %c%s %c%s %c%s %c%s %c%s %c%s %o %c%s %c%s %c%s %c%s`,`color: inherit`, `
+console.log(`
 export default function App() {
 
-    const [todos, setTodos] = useState([])`,`color:orangered`,`
+    const [todos, setTodos] = useState([])
 
              ________________
-  __________/ VARIABLE VALUE \\__________`, `color:orangered; font-size:20px`,
-  `
+  __________/ VARIABLE VALUE \\__________
   
-      todos == [${todos}]`, `color:orangered`, `
-  ______________________________________`, `color:inherit`, `
+      todos == [`,...todos,`]
+  ______________________________________
 
              _______________
   __________/ FUNCTION LIST \\__________
@@ -61,13 +60,12 @@ export default function App() {
   
     return (
         <div className="App">
-           `,`background-color:darkcyan`, `<TodoList`,`background-color: inherit`, `
-                todos={todos}                 `, `background-color: orangered`, `// todos={`, todos,`background-color: orangered`,`}`, `background-color: inherit`, `
+                todos={todos}                 // todos={`, todos,`
                 addTodo={addTodo}
                 completeTodo={completeTodo}
                 editTodoText={editTodoText}
                 deleteTodo={deleteTodo}
-           `,`background-color:darkcyan`, `/>`,`background-color:inherit`, `
+           />
         </div>
     )
 }

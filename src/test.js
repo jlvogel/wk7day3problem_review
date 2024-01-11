@@ -21,3 +21,10 @@ console.log(...todos)
   
 // .filter((i)=> i>0))
 
+
+console.log(`\x1b[31mHello World\x1b[0m
+\x1b[31mHello World\x1b[0m`);
+
+let x = {id: 123, name: "John"}
+
+
