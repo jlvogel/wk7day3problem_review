@@ -157,6 +157,7 @@ export default function App() {
   return (
     <div className="App">
         <TodoList
+          parent="App"
           todos={todos}
           addTodo={addTodo}
           completeTodo={completeTodo}

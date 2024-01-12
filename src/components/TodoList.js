@@ -25,6 +25,7 @@ END OF FILE TodoList.js
 import Todo from "./Todo"
 
 export default function TodoList({
+  parent,
   todos,
   addTodo,
   completeTodo,
@@ -140,6 +141,9 @@ export default function TodoList({
                     (e.key === "Enter") === `, e.key === "Enter", `
                     e.key === "Enter" && addTodo(e)
                 }}`)
+
+          console.log(parent)
+
             e.key === "Enter" && addTodo(e)
             /// this is conditional rendering in react.
             /// same as saying if e.key === "Enter" then call function addTodo(e)  looks like a simpler way of writing an if statement
