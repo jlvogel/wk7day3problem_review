@@ -142,15 +142,20 @@ export default function TodoList({
                     e.key === "Enter" && addTodo(e)
                 }}`)
 
-          console.log(parent)
+            // e.key === "Enter" && addTodo(e)
 
-            e.key === "Enter" && addTodo(e)
             /// this is conditional rendering in react.
             /// same as saying if e.key === "Enter" then call function addTodo(e)  looks like a simpler way of writing an if statement
 
-            // if (e.key === "Enter") {
-            //   addTodo(e)
-            // }
+            if (e.key === "Enter") {
+              console.log(`
+                           Enter press detected.
+                           addTodo(e) will run now.
+                           addTodo is a parameter of TodoList.
+                           The parent of TodoList is `,parent, `
+                           so the function addTodo(e) of `, parent, `will run`)
+              addTodo(e)
+            }
 
             // this appears to do the same thing!  
             // yes it does and it works in plain old js
