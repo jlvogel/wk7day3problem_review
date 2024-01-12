@@ -207,6 +207,7 @@ export default function TodoList({
                 console.log("return(<Todo and set props")
                 return (
                   <Todo
+                    parent = "TodoList"
                     key={todo.id}
                     todo={todo}
                     completeTodo={completeTodo}

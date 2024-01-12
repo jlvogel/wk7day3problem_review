@@ -24,7 +24,7 @@ END OF FILE Todo.js
 
 import { useState } from "react"
 
-export default function Todo({ todo, completeTodo, editTodoText, deleteTodo}){
+export default function Todo({ parent, todo, completeTodo, editTodoText, deleteTodo}){
   console.log("")
   console.log("START COMPONENT Todo.js")
   console.log("todo == ", todo)
