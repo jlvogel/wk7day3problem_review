@@ -26,6 +26,7 @@ import Todo from "./Todo"
 
 export default function TodoList({
   parent,
+  consoleLog,
   todos,
   addTodo,
   completeTodo,
@@ -33,7 +34,7 @@ export default function TodoList({
   deleteTodo
 }) {
 
-console.log(`%c%s %c%s %c%s %c%s %c%s %c%s %o %c%s %c%s %o %c%s %c%s %o %c%s %c%s %c%s %c%s %c%s %c%s %c%s %c%s %c%s`,`color: inherit`, `
+console.log(`%c%s %c%s %c%s %s %c%s %c%s %c%s %c%s %o %c%s %c%s %o %c%s %c%s %o %c%s %c%s %c%s %c%s %c%s %c%s %c%s %c%s %c%s`,`color: inherit`, `
 export default function TodoList({
   todos,
   addTodo,
@@ -42,10 +43,10 @@ export default function TodoList({
   deleteTodo
 }) {`, `color:orangered`,`
              ________________
-  __________/ VARIABLE VALUE \\__________`, `color:orangered; font-size:20px`,
+  __________/ VARIABLE VALUE \\__________`, `color:orangered; font-size:16px`,
   `
   
-      todos == [${todos}]`, `color:orangered`, `
+      todos == [`, consoleLog(todos),`color:orangered; font-size:16px`,`]`, `color:orangered`,`
   ______________________________________`, `color:inherit`, `
 
     return (
@@ -148,7 +149,7 @@ export default function TodoList({
             /// same as saying if e.key === "Enter" then call function addTodo(e)  looks like a simpler way of writing an if statement
 
             if (e.key === "Enter") {
-              console.log(`
+              console.log(`%c%s %s %s %s %s`, `color:limegreen`, `
                            Enter press detected.
                            addTodo(e) will run now.
                            addTodo is a parameter of TodoList.
@@ -166,12 +167,8 @@ export default function TodoList({
       </>
       {todos.length ? (
         <>
-          {console.log("      <h1>Todo Items</h1>")}
           <h1>Todo Items</h1>
-          {console.log("      <ul>")}
           <ul className="todolist">
-            {console.log("      START ul")}
-            {console.log("        todos == ", todos)}
             {todos
               /// studying .filter and .map
               /// need to understand callback functions
@@ -196,9 +193,6 @@ export default function TodoList({
               // .filter((i) => !i.completed)
               // .filter((i) => {return !i.completed}) // same as above function
               .filter((i) => {
-                console.log("inside .filter((i) => {")
-                console.log("i == ", i)
-                console.log("!i.completed == ", !i.completed)
                 return (
                   !i.completed
               )})
@@ -207,9 +201,6 @@ export default function TodoList({
               /// from mdn web docs:
               /// creates a NEW array populated with the results of calling a provided function on every element in the calling array.
               .map((todo) => {
-                console.log("inside .map((todo) => {")
-                console.log("todo == ", todo)
-                console.log("return(<Todo and set props")
                 return (
                   <Todo
                     parent = "TodoList"
@@ -221,8 +212,6 @@ export default function TodoList({
                   />
                 )
               })}
-            {console.log("todos == ", todos)}
-            {console.log("END ul")}  
           </ul>
           <h1>Completed Items </h1>
           <ul className="todolist">
@@ -231,8 +220,6 @@ export default function TodoList({
               .map((todo) => {
                 return (
                   <>
-                    {console.log("<Todo and set props")}
-                    {console.log("todo = ", todo)}
                     <Todo
                       key={todo.id}
                       todo={todo}
